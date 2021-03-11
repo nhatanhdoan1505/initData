@@ -7,7 +7,7 @@ const ServerModel = require("./models/servers");
 
 let random_Boolean = [false, false, true, true, false, false, true, true, true, false]
 
-mongoose.connect("mongodb+srv://doannhatanh:dhoPQ3lemwLNCtvG@cluster0-g513c.mongodb.net/Init?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://3.112.51.86:27017/themightgame", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, (err) => {
