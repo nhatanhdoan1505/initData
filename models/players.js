@@ -1,0 +1,47 @@
+const mongoose = require("mongoose")
+
+const PlayerSchema = new mongoose.Schema(
+    {
+        lock: { type: Boolean },
+        lastOnline: { type: Date },
+        x2XPTime: { type: Date },
+        online: { type: Boolean },
+        appId: { type: String },
+        coin: { type: Number },
+        lockedCoin: { type: Number },
+        paidCoin: { type: Number },
+        usedCharacter: { type: Boolean },
+        clan: { type: Number },
+        ordinalNumber: { type: Number },
+        fame: { type: Number },
+        top: { type: Number },
+        xpMax: { type: Number },
+        charXpMax: { type: Number },
+        friends: { type: String },
+        item: { type: String },
+        equipment: { type: String },
+        itemChest: { type: String },
+        ruby: { type: String },
+        mission: { type: String },
+        missionLevel: { type: String },
+        char1: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char2: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char3: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char4: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char5: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char6: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char7: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char8: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char9: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        char10: { type: mongoose.Schema.Types.ObjectId, ref: "Character" },
+        giftDay: { type: Boolean },
+        giftCode: { type: Boolean },
+        limitedEvent: { type: Boolean },
+        mapPlus: { type: Boolean },
+        rollCall: { type: Number },
+        roomId: { type: mongoose.Schema.Types.ObjectId, ref: "Room" },
+        userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+      }
+);
+
+module.exports = mongoose.model('Player', PlayerSchema)
